@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font */
+@font-face {
+  font-family: myFirstFont;
+  src: url(/public/font/Comfortaa-Regular.ttf);
+}
+
+/* html{
+  font-family: myFirstFont, cursive,sans-serif;
+}  */
+
+/* custom classes */
+html {
+  scroll-behavior: smooth;
+}
+.box-shadow-large {
+  box-shadow: 30px 30px 100px #0d7dd8, -30px -30px 100px #412df1;
+}
