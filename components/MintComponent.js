@@ -23,7 +23,7 @@ const MintComponent = () => {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     if (account) {
-      console.log(signContract, "here is the contract");
+      // console.log(signContract, "here is the contract");
       getCurrentSupply();
       getIsContractPaused();
       getBalance();
@@ -45,7 +45,7 @@ const MintComponent = () => {
     console.log(hash, "here is the hash");
     return (
       <a
-        href={`https://rinkeby.etherscan.io/tx/${hash}`}
+        href={`https://goerli.etherscan.io/tx/${hash}`}
         target="_blank"
         rel="noreferrer"
       >
