@@ -21,7 +21,8 @@ const people = [
     imageUrl: "/images/angels/zaki.png",
     twitterUrl: "#",
     linkedinUrl: "#",
-    description:"Hamdard as his name indicates is person of revolution and sympathy. He decided to take the leap (like a trapeze acrobat) in November 2022 by creating the Little Angels."
+    description:
+      "Hamdard as his name indicates is person of revolution and sympathy. He decided to take the leap (like a trapeze acrobat) in November 2022 by creating the Little Angels.",
   },
   {
     name: "Baqir Nekfar",
@@ -29,7 +30,8 @@ const people = [
     imageUrl: "/images/angels/baqir.png",
     twitterUrl: "#",
     linkedinUrl: "#",
-    description:"The endless possibilities of web3 were more appealing to Nekfar than becoming a cog in the system. Especially good at analyzing smart contracts to discover their weaknesses, Nekfar has ambitions of leaving his mark on the blockchain."
+    description:
+      "The endless possibilities of web3 were more appealing to Nekfar than becoming a cog in the system. Especially good at analyzing smart contracts to discover their weaknesses, Nekfar has ambitions of leaving his mark on the blockchain.",
   },
   {
     name: "Kazim Kayhan",
@@ -37,7 +39,8 @@ const people = [
     imageUrl: "/images/angels/kazim.png",
     twitterUrl: "#",
     linkedinUrl: "#",
-    description:"Kazim have a passion for web development and is a frontend developer.He is also a blockchain enthusiast."
+    description:
+      "Kazim have a passion for web development and is a frontend developer.He is also a blockchain enthusiast.",
   },
 
   // More people...
@@ -53,7 +56,7 @@ export default function TeamSection() {
               Our Team
             </h2>
             <p className="text-xl text-gray-500">
-             We are a team of experts in Blockchain development.
+              We are a team of experts in Blockchain development.
             </p>
           </div>
           <ul
@@ -75,6 +78,7 @@ export default function TeamSection() {
                     alt=""
                   />
                 </div>
+                <h1>hello</h1>
 
                 <div className="space-y-4">
                   <div className="space-y-1 text-lg font-medium leading-6">
@@ -120,7 +124,9 @@ export default function TeamSection() {
                       </ul>
                     </div>
                     <p className="text-bluishCyan">{person.role}</p>
-                    <p className="text-slate-700 font-light text-sm md:text-base">{person.description}</p>
+                    <p className="text-slate-700 font-light text-sm md:text-base">
+                      {person.description}
+                    </p>
                   </div>
                 </div>
               </li>
