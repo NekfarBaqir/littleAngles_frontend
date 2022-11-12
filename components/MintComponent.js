@@ -12,7 +12,6 @@ import showMessage from "../utils/showMessage";
 import { CountDown } from "./CountDown";
 import Modal from "./elements/Modal";
 
-
 const MintComponent = () => {
   const { account, library } = useWeb3React();
   const [counter, setCounter] = useState(1);
@@ -91,7 +90,7 @@ const MintComponent = () => {
         </h2>
         <div className="w-full text-center sm:text-left">
           <CountDown
-            time={"April 29, 2022 5:00:00 AM GMT+8 (singapore time)"}
+            time={"November 12, 2022 5:00:00 AM GMT+8 (singapore time)"}
           />
         </div>
         {paused ? (

@@ -16,9 +16,8 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="mt-3 p-4 sm:p-0 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Little Angels are landing to save the life of little angel like
-                woman/girls on the Earth.
-                Their First mission is in Afghanistan, They want to provide help to Afghanistan women to get to their initial rights.
+                Little Angels are landing to save the life of little angel(children) on the Earth.
+                Their First mission is in Afghanistan, They want to provide help to Afghan children to get to their educated and save their initial rights rights.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start p-8 sm:p-0">
                 <div className="rounded-3xl ">
