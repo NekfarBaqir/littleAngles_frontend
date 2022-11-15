@@ -9,7 +9,7 @@ const AngelCarousel = ({ itemsLength, duration }) => {
       if (currentIndex < itemsLength) {
         setCurrentIndex((prev) => ++prev);
       } else {
-        setCurrentIndex(0);
+        setCurrentIndex(1);
       }
     }, duration);
     return () => {

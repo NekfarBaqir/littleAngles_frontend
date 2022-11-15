@@ -1,18 +1,34 @@
-import Image from "next/image";
 import React from "react";
-import { WalletConnectButton } from "../elements/WalletConnectButton";
+import { Link } from "react-scroll";
+import { MENU } from "../constants/menu";
 
 const Nav = () => {
   return (
-    <div className="flex justify-between items-center w-full p-2 md:p-4 lg:p-6 bg-gradient-to-b  to-transparent">
-      <Image
-        src={"/images/logo.png"}
-        width={100}
-        height={100}
-        layout="fixed"
-        alt="logo"
-      />
-      <WalletConnectButton />
+    <div className=" justify-center items-center gap-4 md:gap-6 hidden lg:flex">
+      {MENU.map((menu) => (
+        <React.Fragment key={menu.name}>
+          {!menu?.external ? (
+            <Link
+              className="text-lg md:text-xl p-2 font-bold cursor-pointer "
+              to={menu.to}
+              smooth={true}
+              duration={500}
+              offset={-130}
+            >
+              {menu.name}
+            </Link>
+          ) : (
+            <a
+              href={menu.to}
+              target="_black"
+              referrerPolicy="noreferrer"
+              className="text-lg md:text-xl p-2 font-bold cursor-pointer "
+            >
+              {menu.name}
+            </a>
+          )}
+        </React.Fragment>
+      ))}
     </div>
   );
 };

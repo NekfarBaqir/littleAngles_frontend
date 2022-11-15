@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/common/Layout";
+import FaqSection from "../components/containers/FaqSection";
 import HeroSection from "../components/containers/HeroSection";
 import MintSection from "../components/containers/MintSection";
 import TeamSection from "../components/containers/TeamSection";
@@ -21,6 +22,7 @@ const Home = () => {
     <Layout SEO={<SEO />}>
       <HeroSection />
       <MintSection />
+      <FaqSection />
       <TeamSection />
     </Layout>
   );

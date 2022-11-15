@@ -48,7 +48,7 @@ const people = [
 
 export default function TeamSection() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="team">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
@@ -78,8 +78,6 @@ export default function TeamSection() {
                     alt=""
                   />
                 </div>
-                <h1>hello</h1>
-
                 <div className="space-y-4">
                   <div className="space-y-1 text-lg font-medium leading-6">
                     <div className="flex justify-between items-center ">

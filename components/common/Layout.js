@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import Nav from "./Nav";
+import Header from "./Header";
 
 const Layout = ({ children, SEO }) => {
   return (
@@ -12,8 +11,8 @@ const Layout = ({ children, SEO }) => {
           <div className="absolute bottom-0 w-full h-[50%] bg-gradient-to-t -z-30 from-white to-transparent"></div>
         </div>
       </div>
-      <header className="flex-0 w-full max-w-[1366px] mx-auto ">
-        <Nav />
+      <header className="flex-0 w-full max-w-[1366px] mx-auto sticky top-0 z-[10000] ">
+        <Header />
       </header>
       <main className="flex-1 w-full overflow-hidden max-w-[1366px] mx-auto z-40 ">
         {children}
