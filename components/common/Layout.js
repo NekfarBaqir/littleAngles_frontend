@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children, SEO }) => {
@@ -17,8 +18,9 @@ const Layout = ({ children, SEO }) => {
       <main className="flex-1 w-full overflow-hidden max-w-[1366px] mx-auto z-40 ">
         {children}
       </main>
-      <footer className="flex-0 w-full overflow-hidden max-w-[1366px] mx-auto mt-12 md:mt-16 border-t py-4 text-center text-gray-600 border-gray-200">
-        little Angels Collection @ All rights reserved
+      <footer className="flex-0 w-full ">
+        <Footer />
+        {/* little Angels Collection @ All rights reserved */}
       </footer>
     </div>
   );
