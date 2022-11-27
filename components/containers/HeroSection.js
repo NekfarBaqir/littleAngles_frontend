@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AngelCarousel from "../Carousel";
 
 export default function HeroSection() {
@@ -34,12 +35,12 @@ export default function HeroSection() {
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#mint"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-3xl text-bluishCyan bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                  >
-                    Mint now!
-                  </a>
+                  <Link href="/mint" passHref>
+                    <span className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-3xl text-bluishCyan bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                      {" "}
+                      Mint now!
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>

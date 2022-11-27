@@ -21,9 +21,9 @@ const Home = () => {
   return (
     <Layout SEO={<SEO />}>
       <HeroSection />
-      <MintSection />
+      {/* 
       <FaqSection />
-      <TeamSection />
+      <TeamSection /> */}
     </Layout>
   );
 };

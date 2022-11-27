@@ -7,12 +7,12 @@ import { abi } from "../components/constants/abi";
 export const Contract = new ethers.Contract(config.address, abi);
 
 export function useContract() {
-  const { account, library } = useWeb3React();
+  const { library } = useWeb3React();
 
   const contract = useMemo(() => Contract.connect(library), [library]);
   const signContract = useMemo(
     () => Contract.connect(library?.getSigner()),
-    [account]
+    [library]
   );
 
   return { contract, signContract };

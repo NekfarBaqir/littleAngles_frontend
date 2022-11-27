@@ -11,9 +11,10 @@ import { useContract } from "../hooks/useContract";
 import showMessage from "../utils/showMessage";
 import { CountDown } from "./CountDown";
 import Modal from "./elements/Modal";
+import Image from "next/image";
 
 const MintComponent = () => {
-  const { account, library } = useWeb3React();
+  const { account, chainId, library } = useWeb3React();
   const [counter, setCounter] = useState(1);
   const { signContract } = useContract();
   const [currentSupply, setCurrentSupply] = useState(0);
@@ -21,13 +22,13 @@ const MintComponent = () => {
   const [balance, setBalance] = useState(0);
   const [open, setOpen] = useState(false);
   useEffect(() => {
+    if (chainId !== config.chainId) return;
     if (account) {
-      // console.log(signContract, "here is the contract");
       getCurrentSupply();
       getIsContractPaused();
       getBalance();
     }
-  }, [account]);
+  }, [chainId, account]);
 
   const getCurrentSupply = async () => {
     setCurrentSupply((await signContract.currentTokenCount()).toString());
@@ -83,14 +84,14 @@ const MintComponent = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse sm:flex-row justify-center items-center px-3 md:px-4 lg:px-8 xl:px-12">
+    <div className="flex mt-10 flex-col-reverse sm:flex-row justify-center items-center px-3 md:px-4 lg:px-8 xl:px-12">
       <div className="">
         <h2 className="text-2xl text-gray-700 mt-5 md:mt-8 lg:mt-12 w-full text-center sm:text-left">
           Presale mint will start in:
         </h2>
         <div className="w-full text-center sm:text-left">
           <CountDown
-            time={"November 12, 2022 5:00:00 AM GMT+8 (singapore time)"}
+            time={"November 28, 2022 5:00:00 AM GMT+8 (singapore time)"}
           />
         </div>
         {paused ? (
@@ -114,6 +115,15 @@ const MintComponent = () => {
       </div>
 
       <Modal open={open} setOpen={setOpen}>
+        <div className="w-full flex justify-center items-center">
+          <Image
+            src={"/images/logo.png"}
+            width={200}
+            height={200}
+            layout="fixed"
+            alt="logo"
+          />
+        </div>
         <div className="flex flex-col md:flex-row justify-center items-center sm:gap-3">
           <h1 className="text-center text-2xl md:text-3xl lg:text-4xl md:my-3 font-bold">
             {counter}

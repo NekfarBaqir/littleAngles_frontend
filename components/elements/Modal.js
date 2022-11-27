@@ -49,7 +49,7 @@ export default function Modal({ open, setOpen, children }) {
                     as="h3"
                     className="text-lg leading-6 uppercase font-bold text-gray-900"
                   >
-                    Mint your cool baby cat!
+                    Mint you Little Angel!
                   </Dialog.Title>
                 </div>
                 {children}

@@ -1,18 +1,18 @@
 import { useWeb3React } from "@web3-react/core";
 import { InjectedConnector } from "@web3-react/injected-connector";
 
+import showMessage from "../../utils/showMessage";
 import { config } from "../../config";
 import { useContract } from "../../hooks/useContract";
 import { shortenAddress } from "../../utils/shortedAddress";
+import { switchNetwork } from "../../utils/onChainUtils";
 
-export const injected = new InjectedConnector({
-  supportedChainIds: [config.chainId],
-});
+export const injected = new InjectedConnector();
 
 // export function ConnectWallet
 
 export function WalletConnectButton({ children, ...props }) {
-  const { account, activate } = useWeb3React();
+  const { account, chainId, activate, library } = useWeb3React();
   const { signContract } = useContract();
 
   const addressInfo = account ? shortenAddress(account) : "Connect Wallet";
@@ -20,9 +20,16 @@ export function WalletConnectButton({ children, ...props }) {
   const connector = injected;
 
   async function connect() {
+    if (!window?.ethereum) {
+      showMessage(
+        "error",
+        "Please install an ethereum based wallet!(metamask,trust wallet...)"
+      );
+    }
     if (account) return;
     try {
       await activate(connector);
+      switchNetwork(config.chainInfo);
     } catch (error) {
       console.error(error);
     }

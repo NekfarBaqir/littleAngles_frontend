@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function Digit({ children, text, last }) {
   return (
     <div className="flex flex-col justify-center items-start">
-      <span className="p-4 font-semibold text-black text-3xl md:text-4xl lg:text-5xl">
+      <span className="p-4 font-semibold text-black text-xl md:text-4xl lg:text-5xl">
         {children}&nbsp; &nbsp; {last === true ? "" : ":"}
       </span>
       <span className="px-4 ml-3 text-gray-500 text-xs md:text-sm lg:text-base">
@@ -53,7 +53,9 @@ export function CountDown({ time }) {
       <div className="flex justify-center items-center my-4 ">
         <Digit text={"d"}>00</Digit> <Digit text={"h"}>00</Digit>
         <Digit text={"m"}>00</Digit>
-        <Digit text={"s"}>00</Digit>
+        <Digit last={true} text={"s"}>
+          00
+        </Digit>
       </div>
     );
   }

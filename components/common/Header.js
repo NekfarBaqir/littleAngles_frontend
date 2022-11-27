@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import { MENU } from "../constants/menu";
 import MenuButton from "../elements/MenuButton";
@@ -10,30 +11,14 @@ import Nav from "./Nav";
 const Header = () => {
   // states
   const [mobileMenuVisibility, setMobileMenuVisibility] = useState(false);
-  const [distance, setDistance] = useState(0);
-  const headerRef = useRef(null);
-  const scrollYPosition = useScrollPosition();
 
   // actions
   const menuToggler = () => {
     setMobileMenuVisibility((prev) => !prev);
   };
 
-  // side effects
-  useEffect(() => {
-    if (headerRef.current !== null) {
-      const headerHeight = headerRef.current?.getBoundingClientRect()?.height;
-      setDistance(scrollYPosition - headerHeight);
-    }
-  }, [scrollYPosition]);
-
   return (
-    <div
-      ref={headerRef}
-      className={`flex justify-between box-border transition-all origin-top items-center w-full p-2 md:p-4 lg:p-6 py-2 md:py-3 lg:py-3 bg-gradient-to-b  to-transparent ${
-        distance > 0 ? "bg-[#68c2f7]" : ""
-      }`}
-    >
+    <div className="flex justify-between box-border transition-all origin-top items-center w-full p-2 md:p-4 lg:p-6 py-2 md:py-3 lg:py-3 bg-gradient-to-b  to-transparent">
       <Image
         src={"/images/logo.png"}
         width={100}
@@ -57,14 +42,10 @@ const Header = () => {
         {MENU.map((menu) => (
           <React.Fragment key={menu.name}>
             {!menu?.external ? (
-              <Link
-                className="text-lg md:text-xl p-2 font-bold cursor-pointer "
-                to={menu.to}
-                smooth={true}
-                duration={500}
-                offset={-130}
-              >
-                {menu.name}
+              <Link href={menu.to} passHref>
+                <span className="text-lg lg:text-xl p-2 font-bold cursor-pointer ">
+                  {menu.name}
+                </span>
               </Link>
             ) : (
               <a

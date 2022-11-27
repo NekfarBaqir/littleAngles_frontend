@@ -1,5 +1,5 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-scroll";
 import { MENU } from "../constants/menu";
 
 const Nav = () => {
@@ -8,14 +8,10 @@ const Nav = () => {
       {MENU.map((menu) => (
         <React.Fragment key={menu.name}>
           {!menu?.external ? (
-            <Link
-              className="text-lg md:text-xl p-2 font-bold cursor-pointer "
-              to={menu.to}
-              smooth={true}
-              duration={500}
-              offset={-130}
-            >
-              {menu.name}
+            <Link passHref href={menu.to}>
+              <span className="text-lg xl:text-xl p-2 font-bold cursor-pointer ">
+                {menu.name}
+              </span>
             </Link>
           ) : (
             <a

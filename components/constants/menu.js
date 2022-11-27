@@ -1,22 +1,26 @@
 export const MENU = [
   {
-    to: "hero",
+    to: "/",
     name: "Home",
   },
   {
-    to: "mint",
+    to: "/mint",
     name: "Mint now",
   },
   {
-    to: "roadMap",
+    to: "/story",
+    name: "Story",
+  },
+  {
+    to: "/roadMap",
     name: "RoadMap",
   },
   {
-    to: "faq",
+    to: "/faq",
     name: "FAQs",
   },
   {
-    to: "team",
+    to: "/team",
     name: "Our Team",
   },
   {
