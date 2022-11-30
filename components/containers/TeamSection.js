@@ -48,8 +48,8 @@ const people = [
 
 export default function TeamSection() {
   return (
-    <div className="bg-white" id="team">
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+    <div className="bg-transparent" id="team">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -61,26 +61,26 @@ export default function TeamSection() {
           </div>
           <ul
             role="list"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
+            className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4"
           >
             {people.map((person) => (
               <li
                 key={person.name}
-                className="rounded-2xl bg-blue-50 p-3 flex flex-col gap-3"
+                className="flex flex-col gap-3 p-3 rounded-2xl bg-blue-50"
               >
-                <div className="overflow-hidden space-y-3">
+                <div className="space-y-3 overflow-hidden">
                   <Image
                     layout="responsive"
                     width={600}
                     height={600}
-                    className="rounded-lg object-cover shadow-lg"
+                    className="object-cover rounded-lg shadow-lg"
                     src={person.imageUrl}
                     alt=""
                   />
                 </div>
                 <div className="space-y-4">
                   <div className="space-y-1 text-lg font-medium leading-6">
-                    <div className="flex justify-between items-center ">
+                    <div className="flex items-center justify-between ">
                       <h3>{person.name}</h3>
                       <ul role="list" className="flex space-x-5">
                         <li>
@@ -90,7 +90,7 @@ export default function TeamSection() {
                           >
                             <span className="sr-only">Twitter</span>
                             <svg
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               aria-hidden="true"
                               fill="#38c3f7"
                               viewBox="0 0 20 20"
@@ -106,7 +106,7 @@ export default function TeamSection() {
                           >
                             <span className="sr-only">LinkedIn</span>
                             <svg
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               aria-hidden="true"
                               fill="#2563eb"
                               viewBox="0 0 20 20"
@@ -122,7 +122,7 @@ export default function TeamSection() {
                       </ul>
                     </div>
                     <p className="text-bluishCyan">{person.role}</p>
-                    <p className="text-slate-700 font-light text-sm md:text-base">
+                    <p className="text-sm font-light text-slate-700 md:text-base">
                       {person.description}
                     </p>
                   </div>

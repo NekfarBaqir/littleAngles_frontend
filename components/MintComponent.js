@@ -84,9 +84,9 @@ const MintComponent = () => {
   };
 
   return (
-    <div className="flex mt-10 flex-col-reverse sm:flex-row justify-center items-center px-3 md:px-4 lg:px-8 xl:px-12">
+    <div className="flex flex-col-reverse items-center justify-center px-3 mt-10 sm:flex-row md:px-4 lg:px-8 xl:px-12">
       <div className="">
-        <h2 className="text-2xl text-gray-700 mt-5 md:mt-8 lg:mt-12 w-full text-center sm:text-left">
+        <h2 className="w-full mt-5 text-2xl text-center text-gray-700 md:mt-8 lg:mt-12 sm:text-left">
           Presale mint will start in:
         </h2>
         <div className="w-full text-center sm:text-left">
@@ -95,7 +95,7 @@ const MintComponent = () => {
           />
         </div>
         {paused ? (
-          <h2 className="text-2xl md:text-3xl lg:text-4xl mt-4 ml-3 text-black my-4 md:my-8 lg:my-12">
+          <h2 className="my-4 mt-4 ml-3 text-2xl text-black md:text-3xl lg:text-4xl md:my-8 lg:my-12">
             Minting will start soon!
           </h2>
         ) : (
@@ -115,7 +115,7 @@ const MintComponent = () => {
       </div>
 
       <Modal open={open} setOpen={setOpen}>
-        <div className="w-full flex justify-center items-center">
+        <div className="flex items-center justify-center w-full">
           <Image
             src={"/images/logo.png"}
             width={200}
@@ -124,12 +124,12 @@ const MintComponent = () => {
             alt="logo"
           />
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center sm:gap-3">
-          <h1 className="text-center text-2xl md:text-3xl lg:text-4xl md:my-3 font-bold">
+        <div className="flex flex-col items-center justify-center md:flex-row sm:gap-3">
+          <h1 className="text-2xl font-bold text-center md:text-3xl lg:text-4xl md:my-3">
             {counter}
           </h1>
-          <p className="text-bluishCyan text-lg text-right md:text-xl xl:text-2xl">
-            ({counter * Number(config.mintPrice)}ETH)
+          <p className="text-lg text-right text-bluishCyan md:text-xl xl:text-2xl">
+            ({parseFloat(counter * Number(config.mintPrice))?.toFixed(2)}ETH)
           </p>
         </div>
         <div className="px-3 md:px-4">
