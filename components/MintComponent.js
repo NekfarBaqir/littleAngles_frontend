@@ -53,6 +53,15 @@ const MintComponent = () => {
       </a>
     );
   };
+  const SeeInOpenSea = () => (
+    <a
+      href="https://testnets.opensea.io/collection/littleangels-lwnazletzn"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Check on Opensea
+    </a>
+  );
   const mintHandler = async () => {
     if (!account) {
       showMessage("error", "Please connect your wallet!");
@@ -75,6 +84,7 @@ const MintComponent = () => {
       if (rs) {
         getCurrentSupply();
         showMessage("success", `Successfully Minted`);
+        showMessage("success", SeeInOpenSea());
       }
     } catch (error) {
       showMessage("error", error.message);

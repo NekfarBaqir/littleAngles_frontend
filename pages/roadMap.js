@@ -1,30 +1,31 @@
 import Head from "next/head";
 import React from "react";
 import Layout from "../components/common/Layout";
+import RoadMapSection from "../components/containers/RoadMapSection";
 import StorySection from "../components/containers/StorySection";
 
 const SEO = () => {
   return (
     <Head>
-      <title>Little Angles Amazing Story</title>
+      <title>Little Angles RoadMap</title>
       <meta
         name="description"
-        content="What is the story behind Little Angels"
+        content="What is the Little Angels RoadMap?"
       />
       <meta
         name="keywords"
-        content="littleAngles, ERC721, NFT,what is littleAngels,who we are, story, our story"
+        content="littleAngles, ERC721, NFT,what is littleAngels,next phases, where were are going , our future"
       />
     </Head>
   );
 };
 
-const Story = () => {
+const RoadMap = () => {
   return (
     <Layout SEO={<SEO />}>
-      <StorySection />
+      <RoadMapSection />
     </Layout>
   );
 };
 
-export default Story;
+export default RoadMap;
