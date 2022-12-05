@@ -24,7 +24,7 @@ export const MENU = [
     name: "Our Team",
   },
   {
-    to: "https://discord/xyz",
+    to: "https://discord.gg/S9v5aBCabg",
     name: "Join our Discord",
     external: true,
   },

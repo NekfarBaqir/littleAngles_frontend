@@ -17,8 +17,10 @@ const Header = () => {
     setMobileMenuVisibility((prev) => !prev);
   };
 
+  console.log(mobileMenuVisibility, "visibility");
+
   return (
-    <div className="flex justify-between box-border transition-all origin-top items-center w-full p-2 md:p-4 lg:p-6 py-2 md:py-3 lg:py-3 bg-gradient-to-b  to-transparent">
+    <div className="flex relative justify-between box-border transition-all origin-top items-center w-full p-2 md:p-4 lg:p-6 py-2 md:py-3 lg:py-3 bg-gradient-to-b  to-transparent">
       <Image
         src={"/images/logo.png"}
         width={100}
@@ -32,7 +34,6 @@ const Header = () => {
         <WalletConnectButton />
         <MenuButton onClick={menuToggler} />
       </div>
-
       <ul
         className={`
           lg:hidden absolute top-[99%] w-full min-h-fit  py-3 z-10 left-0 transition-all bg-gradient-to-br from-[#68c2f7] to-transparent flex flex-col origin-top

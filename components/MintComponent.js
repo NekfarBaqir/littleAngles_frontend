@@ -215,3 +215,5 @@ const MintComponent = () => {
 };
 
 export default MintComponent;
+
+

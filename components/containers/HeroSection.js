@@ -23,12 +23,12 @@ export default function HeroSection() {
                 Little Angels are landing to save the life of little
                 angel(children) on the Earth. Their First mission is in
                 Afghanistan, They want to provide help to Afghan children to get
-                to their educated and save their initial rights rights.
+                to their educated and save their initial rights.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start p-8 sm:p-0">
                 <div className="rounded-3xl ">
                   <a
-                    href="#"
+                    href="https://discord.gg/S9v5aBCabg"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-3xl text-white  bg-gradient-to-r from-bluishCyan to-greenishCyan hover:from-cyan-600 transition-all hover:to-blue-700 md:py-4 md:text-lg md:px-10"
                   >
                     Join our discord
@@ -36,7 +36,7 @@ export default function HeroSection() {
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link href="/mint" passHref>
-                    <span className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-3xl text-bluishCyan bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                    <span className="w-full cursor-pointer flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-3xl text-bluishCyan bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
                       {" "}
                       Mint now!
                     </span>
