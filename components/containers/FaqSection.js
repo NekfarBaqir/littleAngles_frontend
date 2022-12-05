@@ -3,26 +3,24 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is the Little Angels NFT collections?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Its a collection of 5555 Little Angels, which come on the Ethereum Blockchain the rescue of human beings! ",
   },
   {
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+    question: "When the minting day?",
+    answer: "Its on Tuesday, December 5",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is the next phase of the project!",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "The next phase of our project is to bring the Goodness Token and Staking to th project!",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is the prize for top holders?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "In the second next phase we have gatherings and event and will air drop the top holder of our project! Its 1ETH and 1000 Goodness Token.",
   },
-  // More questions...
 ];
 
 function classNames(...classes) {
